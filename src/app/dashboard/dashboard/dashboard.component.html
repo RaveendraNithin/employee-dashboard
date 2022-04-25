@@ -1,0 +1,27 @@
+<nav class="top-app-bar navbar navbar-expand">
+    <div class="container-fluid px-4">
+        <a class="navbar-brand me-auto" href="#">
+            <h3 class="text-black text-uppercase font-monospace">Employee Dashboard</h3>
+        </a>
+        <!-- Navbar items-->
+        <div class="d-flex align-items-center mx-3 me-lg-0">
+            <div class="d-flex">
+
+                <!-- User profile dropdown-->
+                <div class="dropdown" ngbDropdown>
+                    <button class="btn btn-lg btn-icon dropdown-toggle mdc-ripple-upgraded" id="dropdownMenuProfile" type="button" ngbDropdownToggle aria-expanded="false"><i class="fa fa-user"></i></button>
+                    <ul class="dropdown-menu dropdown-menu-end mt-3" aria-labelledby="dropdownMenuProfile" ngbDropdownMenu>
+                        <li>
+                            <a class="dropdown-item mdc-ripple-upgraded" [routerLink]="['/logout']">
+                                <div class="me-3">Logout</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<div id="layoutDrawer">
+    <router-outlet></router-outlet>
+</div>

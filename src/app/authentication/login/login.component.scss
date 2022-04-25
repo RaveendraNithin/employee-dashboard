@@ -1,0 +1,11 @@
+.form-outline {
+    position: relative;
+    .fa {
+        position: absolute;
+        top: 13px;
+        left: 10px;
+    }
+    .form-control {
+        padding-left: 30px;
+    }
+}

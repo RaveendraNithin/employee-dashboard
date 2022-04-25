@@ -1,0 +1,43 @@
+<section class="vh-100">
+    <div class="container-fluid vh-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-6 col-xl-5">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid" alt="Sample image">
+            </div>
+            <div class="col-md-6 col-xl-4 offset-xl-1">
+
+                <form [formGroup]="loginFormGroup" (ngSubmit)="submit()">
+
+                    <div class="text-center text-md-start mt-2 mb-2">
+                        <p>Don't have an acount yet? <a href="#!" class="link-primary fw-bold">Sign Up</a></p>
+                    </div>
+
+                    <div class="form-outline mb-2">
+                        <i class="fa fa-user"></i>
+                        <input type="text" class="form-control" placeholder="Username" formControlName="username" />
+                    </div>
+
+                    <div class="form-outline mb-2">
+                        <i class="fa fa-lock"></i>
+                        <input type="password" class="form-control" placeholder="Password" formControlName="password" />
+                    </div>
+
+                    <div *ngIf="this.formError" class="form-outline mb-2">
+                        <p class="text-danger">
+                            Incorrect username or password!
+                        </p>
+                    </div>
+
+                    <div class="text-center text-md-start mb-2">
+                        <p class="font">Forgot Password?</p>
+                    </div>
+
+                    <div class="text-center text-md-end mb-2">
+                        <button type="submit" [disabled]="!loginFormGroup.valid" class="btn btn-primary btn-md">Login</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
